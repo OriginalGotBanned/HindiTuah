@@ -1,0 +1,42 @@
+[
+  {
+    "input": "Hello, how are you?",
+    "translation": "हैलो आप कैसे हैं"
+  },
+  {
+    "input": "What is your name?",
+    "translation": "आपका नाम क्या है"
+  },
+  {
+    "input": "I love programming and artificial intelligence.",
+    "translation": "मुझे प्रोग्रामिंग और आर्टिफिशियल इंटेलिजेंस पसंद है ।"
+  },
+  {
+    "input": "The weather is nice today.",
+    "translation": "आज मौसम अच्छा है ।"
+  },
+  {
+    "input": "Can you help me with this problem?",
+    "translation": "क्या आप इस समस्या में मेरी मदद कर सकते हैं"
+  },
+  {
+    "input": "Thank you very much for your assistance.",
+    "translation": "आपकी सहायता के लिए बहुत - बहुत धन्यवाद ।"
+  },
+  {
+    "input": "Where is the nearest restaurant?",
+    "translation": "निकटतम रेस्तरां कहाँ है"
+  },
+  {
+    "input": "I would like to book a table for two.",
+    "translation": "मैं दो के लिए एक मेज़ बुक करना चाहूँगा ।"
+  },
+  {
+    "input": "What time does the train leave?",
+    "translation": "ट्रेन कितने बजे निकलती है"
+  },
+  {
+    "input": "Could you please speak more slowly?",
+    "translation": "क्या आप कृपया धीरे - धीरे बोल सकते हैं"
+  }
+]

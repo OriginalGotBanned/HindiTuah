@@ -1,0 +1,250 @@
+{
+  "builder_name": "csv",
+  "citation": "",
+  "config_name": "bpcc-seed-latest",
+  "dataset_name": "bpcc",
+  "dataset_size": 714639916,
+  "description": "",
+  "download_checksums": {
+    "hf://datasets/ai4bharat/BPCC@cdb5f5065220480924e8c4adc20cfb6255f2c43b/bpcc-seed-latest/asm_Beng.tsv": {
+      "num_bytes": 36409519,
+      "checksum": null
+    },
+    "hf://datasets/ai4bharat/BPCC@cdb5f5065220480924e8c4adc20cfb6255f2c43b/bpcc-seed-latest/ben_Beng.tsv": {
+      "num_bytes": 38891802,
+      "checksum": null
+    },
+    "hf://datasets/ai4bharat/BPCC@cdb5f5065220480924e8c4adc20cfb6255f2c43b/bpcc-seed-latest/brx_Deva.tsv": {
+      "num_bytes": 37350057,
+      "checksum": null
+    },
+    "hf://datasets/ai4bharat/BPCC@cdb5f5065220480924e8c4adc20cfb6255f2c43b/bpcc-seed-latest/doi_Deva.tsv": {
+      "num_bytes": 32255916,
+      "checksum": null
+    },
+    "hf://datasets/ai4bharat/BPCC@cdb5f5065220480924e8c4adc20cfb6255f2c43b/bpcc-seed-latest/gom_Deva.tsv": {
+      "num_bytes": 24527131,
+      "checksum": null
+    },
+    "hf://datasets/ai4bharat/BPCC@cdb5f5065220480924e8c4adc20cfb6255f2c43b/bpcc-seed-latest/guj_Gujr.tsv": {
+      "num_bytes": 36894416,
+      "checksum": null
+    },
+    "hf://datasets/ai4bharat/BPCC@cdb5f5065220480924e8c4adc20cfb6255f2c43b/bpcc-seed-latest/hin_Deva.tsv": {
+      "num_bytes": 34971663,
+      "checksum": null
+    },
+    "hf://datasets/ai4bharat/BPCC@cdb5f5065220480924e8c4adc20cfb6255f2c43b/bpcc-seed-latest/kan_Knda.tsv": {
+      "num_bytes": 37996639,
+      "checksum": null
+    },
+    "hf://datasets/ai4bharat/BPCC@cdb5f5065220480924e8c4adc20cfb6255f2c43b/bpcc-seed-latest/kas_Arab.tsv": {
+      "num_bytes": 25540450,
+      "checksum": null
+    },
+    "hf://datasets/ai4bharat/BPCC@cdb5f5065220480924e8c4adc20cfb6255f2c43b/bpcc-seed-latest/mai_Deva.tsv": {
+      "num_bytes": 34685283,
+      "checksum": null
+    },
+    "hf://datasets/ai4bharat/BPCC@cdb5f5065220480924e8c4adc20cfb6255f2c43b/bpcc-seed-latest/mal_Mlym.tsv": {
+      "num_bytes": 39849198,
+      "checksum": null
+    },
+    "hf://datasets/ai4bharat/BPCC@cdb5f5065220480924e8c4adc20cfb6255f2c43b/bpcc-seed-latest/mar_Deva.tsv": {
+      "num_bytes": 41872363,
+      "checksum": null
+    },
+    "hf://datasets/ai4bharat/BPCC@cdb5f5065220480924e8c4adc20cfb6255f2c43b/bpcc-seed-latest/mni_Mtei.tsv": {
+      "num_bytes": 27615443,
+      "checksum": null
+    },
+    "hf://datasets/ai4bharat/BPCC@cdb5f5065220480924e8c4adc20cfb6255f2c43b/bpcc-seed-latest/npi_Deva.tsv": {
+      "num_bytes": 41508100,
+      "checksum": null
+    },
+    "hf://datasets/ai4bharat/BPCC@cdb5f5065220480924e8c4adc20cfb6255f2c43b/bpcc-seed-latest/ory_Orya.tsv": {
+      "num_bytes": 34329455,
+      "checksum": null
+    },
+    "hf://datasets/ai4bharat/BPCC@cdb5f5065220480924e8c4adc20cfb6255f2c43b/bpcc-seed-latest/pan_Guru.tsv": {
+      "num_bytes": 27508496,
+      "checksum": null
+    },
+    "hf://datasets/ai4bharat/BPCC@cdb5f5065220480924e8c4adc20cfb6255f2c43b/bpcc-seed-latest/san_Deva.tsv": {
+      "num_bytes": 35486353,
+      "checksum": null
+    },
+    "hf://datasets/ai4bharat/BPCC@cdb5f5065220480924e8c4adc20cfb6255f2c43b/bpcc-seed-latest/snd_Deva.tsv": {
+      "num_bytes": 6845381,
+      "checksum": null
+    },
+    "hf://datasets/ai4bharat/BPCC@cdb5f5065220480924e8c4adc20cfb6255f2c43b/bpcc-seed-latest/tam_Taml.tsv": {
+      "num_bytes": 40570366,
+      "checksum": null
+    },
+    "hf://datasets/ai4bharat/BPCC@cdb5f5065220480924e8c4adc20cfb6255f2c43b/bpcc-seed-latest/tel_Telu.tsv": {
+      "num_bytes": 36523290,
+      "checksum": null
+    },
+    "hf://datasets/ai4bharat/BPCC@cdb5f5065220480924e8c4adc20cfb6255f2c43b/bpcc-seed-latest/urd_Arab.tsv": {
+      "num_bytes": 27621313,
+      "checksum": null
+    }
+  },
+  "download_size": 699252634,
+  "features": {
+    "src_lang": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "tgt_lang": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "src": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "tgt": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 1413892550,
+  "splits": {
+    "asm_Beng": {
+      "name": "asm_Beng",
+      "num_bytes": 37196241,
+      "num_examples": 99581,
+      "dataset_name": "bpcc"
+    },
+    "ben_Beng": {
+      "name": "ben_Beng",
+      "num_bytes": 39745558,
+      "num_examples": 108000,
+      "dataset_name": "bpcc"
+    },
+    "brx_Deva": {
+      "name": "brx_Deva",
+      "num_bytes": 38135185,
+      "num_examples": 99395,
+      "dataset_name": "bpcc"
+    },
+    "doi_Deva": {
+      "name": "doi_Deva",
+      "num_bytes": 32969364,
+      "num_examples": 90158,
+      "dataset_name": "bpcc"
+    },
+    "gom_Deva": {
+      "name": "gom_Deva",
+      "num_bytes": 25103363,
+      "num_examples": 72766,
+      "dataset_name": "bpcc"
+    },
+    "guj_Gujr": {
+      "name": "guj_Gujr",
+      "num_bytes": 37732873,
+      "num_examples": 105850,
+      "dataset_name": "bpcc"
+    },
+    "hin_Deva": {
+      "name": "hin_Deva",
+      "num_bytes": 35732350,
+      "num_examples": 96377,
+      "dataset_name": "bpcc"
+    },
+    "kan_Knda": {
+      "name": "kan_Knda",
+      "num_bytes": 38764179,
+      "num_examples": 97175,
+      "dataset_name": "bpcc"
+    },
+    "kas_Arab": {
+      "name": "kas_Arab",
+      "num_bytes": 26238024,
+      "num_examples": 88381,
+      "dataset_name": "bpcc"
+    },
+    "mai_Deva": {
+      "name": "mai_Deva",
+      "num_bytes": 35462615,
+      "num_examples": 98382,
+      "dataset_name": "bpcc"
+    },
+    "mal_Mlym": {
+      "name": "mal_Mlym",
+      "num_bytes": 40624707,
+      "num_examples": 98178,
+      "dataset_name": "bpcc"
+    },
+    "mar_Deva": {
+      "name": "mar_Deva",
+      "num_bytes": 42804607,
+      "num_examples": 117403,
+      "dataset_name": "bpcc"
+    },
+    "mni_Mtei": {
+      "name": "mni_Mtei",
+      "num_bytes": 28233481,
+      "num_examples": 78204,
+      "dataset_name": "bpcc"
+    },
+    "npi_Deva": {
+      "name": "npi_Deva",
+      "num_bytes": 42468068,
+      "num_examples": 120949,
+      "dataset_name": "bpcc"
+    },
+    "ory_Orya": {
+      "name": "ory_Orya",
+      "num_bytes": 35043912,
+      "num_examples": 90440,
+      "dataset_name": "bpcc"
+    },
+    "pan_Guru": {
+      "name": "pan_Guru",
+      "num_bytes": 28084758,
+      "num_examples": 73115,
+      "dataset_name": "bpcc"
+    },
+    "san_Deva": {
+      "name": "san_Deva",
+      "num_bytes": 36259171,
+      "num_examples": 97646,
+      "dataset_name": "bpcc"
+    },
+    "snd_Deva": {
+      "name": "snd_Deva",
+      "num_bytes": 6993391,
+      "num_examples": 18857,
+      "dataset_name": "bpcc"
+    },
+    "tam_Taml": {
+      "name": "tam_Taml",
+      "num_bytes": 41345671,
+      "num_examples": 98038,
+      "dataset_name": "bpcc"
+    },
+    "tel_Telu": {
+      "name": "tel_Telu",
+      "num_bytes": 37299112,
+      "num_examples": 98262,
+      "dataset_name": "bpcc"
+    },
+    "urd_Arab": {
+      "name": "urd_Arab",
+      "num_bytes": 28403286,
+      "num_examples": 99118,
+      "dataset_name": "bpcc"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}
