@@ -296,3 +296,190 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - Hugging Face for the Transformers library
 - PEFT for parameter-efficient fine-tuning
 - The open-source community for their contributions
+
+
+
+
+| Req. No | Requirement             | Input                                                  | Output                                         | Processing                                                               |
+| ------- | ----------------------- | ------------------------------------------------------ | ---------------------------------------------- | ------------------------------------------------------------------------ |
+| R1      | User registration/login | Name, Aadhar, Email, Password                          | Success/Failure Message                        | Validate inputs, check for existing user, hash password, store user data |
+| R2      | Search/Track Trains     | Source, Destination, Date                              | List of trains with timings                    | Fetch train list from database based on route/date                       |
+| R3      | Check seat availability | Train No, Date, Class                                  | Seats Available/Not Available                  | Query reservation DB for seat status                                     |
+| R4      | Fare inquiry            | Train No, Class, Source, Destination                   | Fare Amount                                    | Calculate fare based on distance and class                               |
+| R5      | Book tickets            | Train No, Date, Passenger Details, Class, Payment Info | Booking Confirmation, PNR                      | Deduct seats, generate PNR, update booking DB                            |
+| R6      | Cancel tickets          | PNR Number                                             | Cancellation Success/Failure, Refund Info      | Verify PNR, update seat status, initiate refund process                  |
+| R7      | Check PNR status        | PNR Number                                             | Current status (Confirmed/WL/RAC)              | Fetch booking status from DB                                             |
+| R8      | Tatkal booking          | Same as booking + time constraint                      | PNR Confirmation or Error                      | Similar to booking but with different fare and time limit                |
+| R9      | Generate train schedule | Train No                                               | Complete train schedule with stops and timings | Pull train schedule from DB                                              |
+| R10     | Concession management   | Concession Type (Senior, Student), ID proof            | Discounted Fare                                | Apply rules for discounts based on category                              |
+
+
+
+| Req. No | Requirement                   | Input                                  | Output                         | Processing                                    |
+| ------- | ----------------------------- | -------------------------------------- | ------------------------------ | --------------------------------------------- |
+| RM1     | Road inventory management     | Road ID, Location, Type, Length        | Confirmation, Road Data        | Store and update road data in database        |
+| RM2     | Traffic data monitoring       | Location, Date/Time                    | Vehicle Count, Congestion Data | Process sensor/CCTV data                      |
+| RM3     | Accident tracking             | Location, Time, Description            | Alert, Accident Record         | Log incident, alert nearby emergency services |
+| RM4     | Maintenance scheduling        | Road ID, Issue Type                    | Scheduled Maintenance Date     | Assign to contractor, generate schedule       |
+| RM5     | Road condition monitoring     | Sensor data, Weather data              | Road Condition Status          | Analyze data for wear and tear                |
+| RM6     | Construction project tracking | Project ID, Timeline, Budget           | Status of Project              | Track progress, update financials             |
+| RM7     | Toll collection system        | Vehicle Type, Entry/Exit Points        | Toll Fee, Receipt              | Calculate fee, log transaction                |
+| RM8     | Route optimization            | Source, Destination                    | Shortest/Best Route            | Use graph algorithms (Dijkstra)               |
+| RM9     | Permit and licensing          | Vehicle Info, Route, Permit Type       | Approved/Rejected Permit       | Validate against road policies                |
+| RM10    | Emergency response routing    | Accident Location, Resources Available | Best Emergency Route           | Real-time routing with traffic data           |
+
+
+
+
+
+
+| Req. No | Requirement             | Input                                        | Output                           | Processing                                           |
+| ------- | ----------------------- | -------------------------------------------- | -------------------------------- | ---------------------------------------------------- |
+| AR1     | User registration/login | Name, Email, Passport Number, Password       | Success/Failure Message          | User verification, DB insertion                      |
+| AR2     | Flight search           | Source, Destination, Date                    | List of Flights                  | Query flight schedule DB                             |
+| AR3     | Check seat availability | Flight No, Class, Date                       | Seats Available/Not Available    | Seat mapping system query                            |
+| AR4     | Fare inquiry            | Flight No, Class                             | Ticket Price                     | Dynamic pricing logic                                |
+| AR5     | Book flight tickets     | Passenger Info, Flight Details, Payment Info | Ticket + PNR                     | Payment processing, seat blocking, ticket generation |
+| AR6     | Cancel tickets          | PNR                                          | Cancel Confirmation, Refund Info | Reallocation of seat, refund initiation              |
+| AR7     | Check flight status     | Flight No, Date                              | Delayed/On Time/Canceled         | Real-time integration with airline system            |
+| AR8     | Frequent flyer program  | User ID, Travel History                      | Miles Earned, Tier Status        | Analyze past trips, assign rewards                   |
+| AR9     | Baggage tracking        | PNR, Baggage Tag                             | Baggage Location                 | Integration with airport logistics                   |
+| AR10    | Check-in system         | PNR, Seat Selection                          | Boarding Pass                    | Assign seats, generate pass                          |
+
+
+
+
+import tkinter as tk
+from tkinter import ttk, messagebox
+
+def login():
+    messagebox.showinfo("Login", f"Welcome {entry_name.get()}!")
+
+def search_trains():
+    src = entry_source.get()
+    dest = entry_destination.get()
+    date = entry_date.get()
+    messagebox.showinfo("Search Trains", f"Searching trains from {src} to {dest} on {date}")
+
+root = tk.Tk()
+root.title("Railway Reservation System")
+root.geometry("400x400")
+
+tk.Label(root, text="User Registration/Login", font=("Arial", 16)).pack(pady=10)
+
+tk.Label(root, text="Name").pack()
+entry_name = tk.Entry(root)
+entry_name.pack()
+
+tk.Label(root, text="Email").pack()
+entry_email = tk.Entry(root)
+entry_email.pack()
+
+tk.Label(root, text="Password").pack()
+entry_password = tk.Entry(root, show='*')
+entry_password.pack()
+
+tk.Button(root, text="Login", command=login).pack(pady=10)
+
+tk.Label(root, text="Search Trains", font=("Arial", 14)).pack(pady=15)
+tk.Label(root, text="Source").pack()
+entry_source = tk.Entry(root)
+entry_source.pack()
+
+tk.Label(root, text="Destination").pack()
+entry_destination = tk.Entry(root)
+entry_destination.pack()
+
+tk.Label(root, text="Date (YYYY-MM-DD)").pack()
+entry_date = tk.Entry(root)
+entry_date.pack()
+
+tk.Button(root, text="Search", command=search_trains).pack(pady=10)
+
+root.mainloop()
+
+
+
+
+
+
+
+
+import tkinter as tk
+from tkinter import messagebox
+
+def add_road():
+    road_id = entry_road_id.get()
+    location = entry_location.get()
+    road_type = entry_road_type.get()
+    messagebox.showinfo("Road Added", f"Road {road_id} at {location} added as {road_type}.")
+
+root = tk.Tk()
+root.title("Road Management System")
+root.geometry("400x350")
+
+tk.Label(root, text="Add Road Inventory", font=("Arial", 16)).pack(pady=10)
+
+tk.Label(root, text="Road ID").pack()
+entry_road_id = tk.Entry(root)
+entry_road_id.pack()
+
+tk.Label(root, text="Location").pack()
+entry_location = tk.Entry(root)
+entry_location.pack()
+
+tk.Label(root, text="Road Type").pack()
+entry_road_type = tk.Entry(root)
+entry_road_type.pack()
+
+tk.Button(root, text="Add Road", command=add_road).pack(pady=10)
+
+root.mainloop()
+
+
+
+
+
+
+import tkinter as tk
+from tkinter import messagebox
+
+def flight_search():
+    src = entry_source.get()
+    dest = entry_destination.get()
+    date = entry_date.get()
+    messagebox.showinfo("Flight Search", f"Searching flights from {src} to {dest} on {date}")
+
+root = tk.Tk()
+root.title("Airline Reservation System")
+root.geometry("400x400")
+
+tk.Label(root, text="User Login", font=("Arial", 16)).pack(pady=10)
+
+tk.Label(root, text="Email").pack()
+entry_email = tk.Entry(root)
+entry_email.pack()
+
+tk.Label(root, text="Password").pack()
+entry_password = tk.Entry(root, show='*')
+entry_password.pack()
+
+tk.Button(root, text="Login", command=lambda: messagebox.showinfo("Login", "Logged in!")).pack(pady=10)
+
+tk.Label(root, text="Search Flights", font=("Arial", 14)).pack(pady=15)
+tk.Label(root, text="Source").pack()
+entry_source = tk.Entry(root)
+entry_source.pack()
+
+tk.Label(root, text="Destination").pack()
+entry_destination = tk.Entry(root)
+entry_destination.pack()
+
+tk.Label(root, text="Date (YYYY-MM-DD)").pack()
+entry_date = tk.Entry(root)
+entry_date.pack()
+
+tk.Button(root, text="Search", command=flight_search).pack(pady=10)
+
+root.mainloop()
+
